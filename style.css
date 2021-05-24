@@ -59,11 +59,11 @@ table {
 }
 
 ::selection {
-  color: rgb(0, 251, 2);
+  color: white;
 }
 
 ::-moz-selection {
-  color: rgb(0, 251, 2);
+  color: white;
 }
 
 body{
