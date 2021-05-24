@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+
+    <title>Filippo Marani</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Marco Pagan">
+    <!--<link rel="icon" href="icon.png">-->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="p5.min.js"></script>
+</head>
+
+<body>
+    <div id="video_wrapper">
+        <video autoplay muted loop>
+            <source src="videoT.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!--<iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?showinfo=0&autoplay=1&loop=1&controls=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    </div>
+
+    <div id="content">
+    <header>
+        <div style="text-align: left;"><h1>
+            <a href="">filippomarani</a>
+        </h1></div>
+
+        <div style="text-align: center;" id="live_header">
+            
+            <h3 style="display: inline-block;">
+                <svg height="18" width="18">
+                    <circle cx="10" cy="10" r="6" fill="red" />
+                </svg>
+                <span></span>
+            </h3>
+        </div>
+
+        <div style="text-align: right;"><h3>
+            <a href="https://www.instagram.com/filippomaranii/">instagram</a>
+        </h3></div>
+
+    </header>
+
+    <div style="text-align: center;" id="live_body">
+            <h3>
+                <svg height="18" width="18">
+                    <circle cx="10" cy="10" r="6" fill="red" />
+                </svg>
+                <span>streaming 7/7 giorni dal 31.05.21</span>
+            </h3>
+    </div>
+
+
+    <script type="text/javascript">
+        function triggerText(id){
+            let text = document.getElementById(id);
+            if (text.classList.contains('hidden')){
+                text.classList.remove('hidden');
+            }else{
+                text.classList.add('hidden');
+            }
+            if (id == 'sponsor') {
+                resizeCanvas(sponsor.offsetWidth, sponsor.offsetHeight);
+            }
+        }
+    </script>
+
+
+    <main>
+        <section>
+            <div>
+                <h2><a href="javascript:void(0)" onclick="triggerText('text')">Per fare un albero</a><br>31.05 – 06.06.21</h2>
+            </div>
+
+            <div>
+                <h2>Spazio A<br>via Melloni 1/A, Parma</h2>
+            </div>
+        </section>
+
+        <div id="text" class="hidden">
+            <p>Ho voluto creare un episodio surreale inserendomi all’interno di uno spazio asettico. L’osservazione è riservata all’esterno, realtà con la quale non c’è possibilità di interazione.<br>Prendendo l’albero come elemento simbolo della natura, e ricostruendolo intero con l’ausilio delle stampanti 3D, cerco di immergermi in una realtà in cui il rapporto tra natura artificiale, macchina ed essere umano è esasperato per via della grande quantità di tempo impiegato.<br>Critico rispetto alle modalità utilizzate dall’uomo per interagire con l’ambiente, e pensando che queste siano spesso dettate da convenzioni e abitudini, ricreando questo albero vorrei invitare il pubblico a riflettere sul significato dell’abitudine umana al dominio. Forse il pensiero costante di voler possedere e controllare tutto non ha senso, come può non avere senso il tentativo di creare una nuova natura utilizzando la tecnologia, che sicuramente non può rimpiazzare l’originale.<br>Prigionieri di ciò che costruiamo, ci confondiamo e ci facciamo confondere. Questo albero fittizio, freddo per caratteristiche e inutile da punto di vista naturale, può essere il simbolo di quest’epoca?<br>Filippo Marani</p>
+        </div>
+    </main>
+
+    <footer>
+        <h3 id="interno_verde_logo">Concept e performance di filippomarani, a cura di Ilturco, in occasione di <a href="https://internoverde.it/giardini-aperti-parma/"><img src="imgs/interno_verde.svg"></a></h3>
+        <div>
+            <a href="javascript:void(0)" onclick="triggerText('sponsor')">☺</a>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+    <div id="sponsor"></div>
+    <script type="text/javascript" src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
