@@ -198,6 +198,7 @@ footer a{
 }
 
 #sponsor{
+    border: 1px solid black;
     z-index: 150;
     position: fixed;
     top: 25%;
