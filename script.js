@@ -1,12 +1,25 @@
 // CONSTANTS
 const sponsor = document.getElementById('sponsor');
+const videoWrapper = document.getElementById('video_wrapper');
+
+
+
+// VARIABLES
 let speed = 2;
 let img1, img2, img3, img4, img5;
-
 let balls = [];
 let ball;
+let landscape, plandscape;
 
 
+
+// INSTRUCTIONS
+window.addEventListener("resize", checkRatio);
+setRatio();
+
+
+
+// FUNCTIONS 
 function preload() {
     img1 = loadImage('imgs/chiesi.png');
     img2 = loadImage('imgs/fablab.png');
@@ -33,7 +46,6 @@ function setup() {
 }
 
 
-
 function draw(){
     background(255, 255, 0);
     for(let ball of balls){
@@ -41,11 +53,7 @@ function draw(){
         ball.move();
         ball.checkBorders();
     }
-
-
-
 }
-
 
 
 function windowResized() {
@@ -53,7 +61,50 @@ function windowResized() {
 }
 
 
+function setRatio(){
+    let wdt = document.documentElement.clientWidth;
+    let hgt = document.documentElement.clientHeight;
+    if (wdt > hgt) {plandscape = true}
+    else{plandscape = false}
+    if (plandscape) {
+        videoWrapper.classList.add('video_horizontal');
+    }else{
+        videoWrapper.classList.add('video_vertical');
+    }
+}
 
+
+function checkRatio(){
+    let wdt = document.documentElement.clientWidth;
+    let hgt = document.documentElement.clientHeight;
+
+    if (wdt > hgt) {
+        landscape = true;
+    }else{
+        landscape = false
+    }
+
+    if (landscape != plandscape) {
+        changeRatioClass();
+    }
+    plandscape = landscape;
+}
+
+
+function changeRatioClass(){
+    console.log('triggered!');
+    if (landscape) {
+        videoWrapper.classList.remove('video_vertical');
+        videoWrapper.classList.add('video_horizontal');
+    }else{
+        videoWrapper.classList.remove('video_horizontal');
+        videoWrapper.classList.add('video_vertical');
+    }
+}
+
+
+
+// CLASS
 class Ball{
     constructor(tempX, tempY, tempImg){
         this.x = tempX;
@@ -63,7 +114,6 @@ class Ball{
         this.speedX = speed;
         this.speedY = speed;
     }
-
 
     display(){
         image(this.img, this.x, this.y);
@@ -91,20 +141,3 @@ class Ball{
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
