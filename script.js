@@ -35,7 +35,7 @@ function setup() {
 
 
 function draw(){
-    background(0, 251, 2);
+    background(255, 255, 0);
     for(let ball of balls){
         ball.display();
         ball.move();
