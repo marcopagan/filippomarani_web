@@ -59,11 +59,11 @@ table {
 }
 
 ::selection {
-  color: white;
+  color: rgb(0, 251, 2);
 }
 
 ::-moz-selection {
-  color: white;
+  color: rgb(0, 251, 2);
 }
 
 body{
@@ -71,6 +71,7 @@ body{
     font-family: Arial, sans-serif;
     display: block;
     line-height: 1.6;
+    color: white;
 }
 
 #content{
@@ -96,7 +97,7 @@ header a{
     top: var(--margin);
     font-size: var(--fontSize);
     font-weight: normal;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -118,7 +119,7 @@ section div{
 
 section a{
     font-size: var(--fontSize);
-    color: black;
+    color: white;
 }
 
 section a:hover{
