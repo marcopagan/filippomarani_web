@@ -232,6 +232,31 @@ footer a{
 
 
 
+#video_wrapper iframe{
+    z-index: 105;
+    position: absolute;
+    left: 50%;
+    /*transform: translate(-50%, -50%);*/
+}
+
+
+.video_horizontal iframe{
+    width: 100vw;
+    min-height: 100%;
+    height: 100vh;
+    top: 45%;
+}
+
+.video_vertical iframe{
+    width: 100vw;
+    min-height: 100%;
+    top: 75%;
+}
+
+
+
+
+
 #live_header h3{
     margin-top: 10px;
 }
