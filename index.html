@@ -15,18 +15,33 @@
 </head>
 
 <body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v10.0" nonce="nmY9VjT4"></script>
+    <style type="text/css">
+        #video_wrapper iframe{
+            z-index: 105;
+            position: absolute;
+            left: 50%;
+        }
+
+
+        .video_horizontal iframe{
+            width: 100vw;
+            min-height: 100%;
+            height: 100vh;
+            top: 45%;
+        }
+
+        .video_vertical iframe{
+            width: 100vw;
+            min-height: 100%;
+            top: 75%;
+        }
+    </style>
     <div id="video_wrapper">
         <!--<video autoplay muted loop playsinline>
             <source src="video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>-->
-        <div class="fb-video"
-            data-href="https://www.facebook.com/ilturco.internoverde/videos/1423028584726043/"
-            data-width="3000"
-            data-allowfullscreen="true">
-        </div>
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Filturco.internoverde%2Fvideos%2F1423028584726043%2F&width=1280" width="1280" height="720" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
     </div>
 
     <div id="content">
