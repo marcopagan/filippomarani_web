@@ -68,8 +68,10 @@ function setRatio(){
     else{plandscape = false}
     if (plandscape) {
         videoWrapper.classList.add('video_horizontal');
+        videoWrapper.children[0].style.transform ='translate(-50%, -50%) scale(1.2)';
     }else{
         videoWrapper.classList.add('video_vertical');
+        videoWrapper.children[0].style.transform ='translate(-50%, -50%)';
     }
 }
 
@@ -96,9 +98,11 @@ function changeRatioClass(){
     if (landscape) {
         videoWrapper.classList.remove('video_vertical');
         videoWrapper.classList.add('video_horizontal');
+        videoWrapper.children[0].style.transform ='translate(-50%, -50%) scale(1.2)';
     }else{
         videoWrapper.classList.remove('video_horizontal');
         videoWrapper.classList.add('video_vertical');
+        videoWrapper.children[0].style.transform ='translate(-50%, -50%)';
     }
 }
 
