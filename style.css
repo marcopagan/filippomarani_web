@@ -59,19 +59,21 @@ table {
 }
 
 ::selection {
-  color: rgb(0, 251, 2);
+    background-color: white;
+    color: rgb(190, 252, 0);
 }
 
 ::-moz-selection {
-  color: rgb(0, 251, 2);
+    background-color: white;
+    color: rgb(190, 252, 0);
 }
 
 body{
-    background-color: rgb(0, 251, 2);
+    background-color: rgb(190, 252, 0);
     font-family: Arial, sans-serif;
     display: block;
     line-height: 1.6;
-    color: white;
+    color: black;
 }
 
 #content{
@@ -97,7 +99,7 @@ header a{
     top: var(--margin);
     font-size: var(--fontSize);
     font-weight: normal;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -119,7 +121,7 @@ section div{
 
 section a{
     font-size: var(--fontSize);
-    color: white;
+    color: black;
 }
 
 section a:hover{
@@ -130,6 +132,7 @@ section a:hover{
     font-size:  var(--fontSize);
     width: 100%;
     padding-bottom: 120px;
+    background-color: rgb(190, 252, 0);
 }
 
 .hidden{
@@ -193,6 +196,13 @@ footer a{
 .video_horizontal video{
     width: 100%;
     min-height: 100%;
+}
+
+#video_wrapper video{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .video_horizontal iframe{
