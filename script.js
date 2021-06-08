@@ -10,12 +10,44 @@ let img1, img2, img3, img4, img5;
 let balls = [];
 let ball;
 let landscape, plandscape;
+let pezzoCount = 1;
 
 
 
 // INSTRUCTIONS
 window.addEventListener("resize", checkRatio);
 setRatio();
+$(document).mousemove(function(e) {
+  $("#img_pezzi").css({
+    left: e.pageX -180,
+    top: e.pageY +2
+  });
+
+  $("#img_archivio").css({
+    left: e.pageX +2,
+    top: e.pageY
+  });
+});
+
+$('#link_pezzo').mouseenter(function(){
+    let img = document.getElementById('img_pezzi');
+    img.classList.remove('hidden');
+});
+
+$('#link_pezzo').mouseleave(function(){
+    let img = document.getElementById('img_pezzi');
+    img.classList.add('hidden');
+});
+
+$('#link_archivio').mouseenter(function(){
+    let img = document.getElementById('img_archivio');
+    img.classList.remove('hidden');
+});
+
+$('#link_archivio').mouseleave(function(){
+    let img = document.getElementById('img_archivio');
+    img.classList.add('hidden');
+});
 
 
 
@@ -103,6 +135,21 @@ function changeRatioClass(){
         videoWrapper.classList.remove('video_horizontal');
         videoWrapper.classList.add('video_vertical');
         videoWrapper.children[0].style.transform ='translate(-50%, -50%)';
+    }
+}
+
+
+
+function changePiece(){
+    let pezzo = document.getElementById('pezzo');
+    pezzoCount++;
+    pezzo.innerHTML = pezzoCount;
+
+    let img = document.getElementById('img_pezzi').children[0];
+    img.src = 'pezzo/'+pezzoCount+'.png';
+
+    if (pezzoCount >= 38) {
+        pezzoCount = 0;
     }
 }
 

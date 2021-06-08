@@ -132,7 +132,6 @@ section a:hover{
     font-size:  var(--fontSize);
     width: 100%;
     padding-bottom: 120px;
-    background-color: rgb(5, 58, 255);
 }
 
 .hidden{
@@ -246,6 +245,26 @@ footer a{
     position: fixed;
     top: 25%;
     height: 50%;
+}
+
+#img_pezzi{
+    z-index: 160;
+}
+
+#img_pezzi img{
+    width: 350px;
+    height: auto;
+}
+
+#img_archivio{
+    z-index: 160;
+}
+
+.img_hover{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
 }
 
 

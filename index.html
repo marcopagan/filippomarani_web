@@ -78,14 +78,14 @@
             <div>
                 <h2><a href="javascript:void(0)" onclick="triggerText('text')">Per fare un albero</a>
                     <br>
-                    <a href="https://www.facebook.com/ilturco.internoverde/videos/" style="text-decoration: none;">
+                    <a id="link_archivio" href="https://www.facebook.com/ilturco.internoverde/videos/" style="text-decoration: none">
                     <svg height="18" width="18">
                     <circle cx="10" cy="10" r="6" fill="red"/></svg>
                 live streaming archivio</a></h2>
             </div>
 
             <div>
-                <h2>38/38 pezzi<br>80 ore di stampa</h2>
+                <h2><a id="link_pezzo" href="javascript:void(0)" style="text-decoration: none" onclick="changePiece()"><span id="pezzo">1</span>/38 pezzi 🌳</a><br>80 ore di stampa</h2>
             </div>
         </section>
 
@@ -100,11 +100,13 @@
             <a href="javascript:void(0)" onclick="triggerText('sponsor')">☺</a>
         </div>
     </footer>
-
     </div>
 
 
 
+
+    <div id="img_pezzi" class="img_hover hidden"><img src="pezzo/1.png"></div>
+    <div id="img_archivio" class="img_hover hidden"><img src="archive.jpg"></div>
     <div id="sponsor"></div>
     <script type="text/javascript" src="script.js"></script>
 
