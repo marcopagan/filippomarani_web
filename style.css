@@ -59,21 +59,21 @@ table {
 }
 
 ::selection {
-    background-color: black;
-    color: rgb(190, 252, 0);
+    background-color: white;
+    color: rgb(5, 58, 255);
 }
 
 ::-moz-selection {
-    background-color: black;
-    color: rgb(190, 252, 0);
+    background-color: white;
+    color: rgb(5, 58, 255);
 }
 
 body{
-    background-color: rgb(190, 252, 0);
+    background-color: rgb(5, 58, 255);
     font-family: Arial, sans-serif;
     display: block;
     line-height: 1.6;
-    color: black;
+    color: white;
 }
 
 #content{
@@ -99,7 +99,7 @@ header a{
     top: var(--margin);
     font-size: var(--fontSize);
     font-weight: normal;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -121,7 +121,7 @@ section div{
 
 section a{
     font-size: var(--fontSize);
-    color: black;
+    color: white;
 }
 
 section a:hover{
@@ -132,7 +132,7 @@ section a:hover{
     font-size:  var(--fontSize);
     width: 100%;
     padding-bottom: 120px;
-    background-color: rgb(190, 252, 0);
+    background-color: rgb(5, 58, 255);
 }
 
 .hidden{
@@ -166,7 +166,7 @@ footer div{
 
 footer a{
     font-size: var(--fontSize);
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -270,14 +270,6 @@ footer a{
         width: 80px;
     }
 
-    #live_header{
-        opacity: 0;
-    }
-
-    #live_header h3:after{
-        content: 'streaming';
-    }
-
     #live_body{
         display: block;
     }
@@ -300,18 +292,6 @@ footer a{
     #interno_verde_logo img{
         width: 100px;
     }
-
-    #live_header{
-        opacity: 0;
-    }
-
-    #live_header h3:after{
-        content: 'streaming';
-    }
-
-    #live_body{
-        display: block;
-    }
 }
 
 
@@ -324,18 +304,6 @@ footer a{
     #sponsor{
         left: 22%;
         width: 56%;
-    }
-
-    #live_header{
-        opacity: 1;
-    }
-
-    #live_header h3:after{
-        content: 'streaming 7/7 giorni dal 31.05.21';
-    }
-
-    #live_body{
-        display: none;
     }
 }
 
